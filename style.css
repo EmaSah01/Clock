@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #2e2e2e; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 62.5%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    width: 35rem;
+    height: 35rem;
+    background-color: #3d3d3d;
+    border-radius: 50%;
+    border: 0.5rem solid #666;
+    box-shadow: 0.5rem 0.5rem 1rem #222, -0.5rem -0.5rem 1rem #444;
+    position: relative;
+}
+
+.numbers {
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+
+
+.numbers div {
+    position: absolute;
+    font-size: 2.5rem;
+    color: #cfd9e7;
+    text-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.6); 
+}
+
+.twelve {
+    top:1rem;
+    left: 50%;
+    transform : translateX(-50%);
+}
+
+
+.three {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.six {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.nine {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.arrows {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.arrows::before {
+    content: "";
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0.2rem 0.2rem 0.5rem #777;
+    z-index: 10;
+}
+
+
+.arrows div {
+    width: 0.7rem;
+    height:12rem;
+    background-color: #fff0f5;
+    position: absolute;
+    bottom: 50%;
+    box-shadow: 0.2rem 0.2rem 0.5rem #444;
+    border-radius: 100% 100% 0 0;
+    transform-origin: bottom center;
+}
+
+
+.arrows .hour {
+    height: 10rem;
+    transform: rotate(90deg);
+}
+
+.arrows .minute {
+    background-color: #f0f0f0;
+}
+
+.arrows .second {
+    background-color: #a5b8ba;
+    transform: rotate(270deg);
+}
